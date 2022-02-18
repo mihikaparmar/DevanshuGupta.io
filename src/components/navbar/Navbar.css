@@ -96,7 +96,7 @@ Responsiveness
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .navbar-container{
     min-height: 84px;
   }
@@ -105,14 +105,16 @@ Responsiveness
     font-weight: lighter;
   }
   .tfSvg img {
-    width: 70px;
+    width: 90px;
     border-radius: 22px;
+    margin-left: 40px;
+    height: 60px;
   }
   .nav-menu {
     position: fixed;
-    right: 0;
+    right: 0px;
     top: 0;
-    background: #1c023f 101.09%;
+    background: linear-gradient(90.57deg,#c1c7fa 1.73%, #1c023f 101.09%);
     box-shadow: 6.02206px 6.02206px 12.546px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
     height: 50vh;

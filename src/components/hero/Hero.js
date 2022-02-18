@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import "./Hero.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import TextLoop from "react-text-loop";
 import Aos from 'aos';
 import 'aos/dist/aos.css'
@@ -22,7 +22,7 @@ const Hero = () => {
     <>
       
         <div className="app-container">
-        <div class="block">
+        <div className="block">
         <div className="imgg">
               <img  data-aos="fade-up " src="/images/devu5.png" alt="" />
           </div>

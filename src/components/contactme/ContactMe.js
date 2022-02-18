@@ -1,14 +1,11 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 import './ContactMe.css'
-import Aos from 'aos';
+
 import 'aos/dist/aos.css'
 
 
 const ContactMe = () => {
-    useEffect(()=>{
-        Aos.init({duration:1000})
-
-    },[]);
+    
     const [user,setUser]=useState({
         Name:"",
         Email:"",
@@ -58,7 +55,7 @@ const ContactMe = () => {
 
   return <div>
        <div className="container1">
-      <form class="form" method="POST">
+      <form className="form" method="POST">
          
   <h2  data-aos="fade-down" className='get'>Get In Touch</h2>
   <div className="styling">
@@ -74,7 +71,7 @@ const ContactMe = () => {
    value={user.Message} onChange={getUsserData} ></input></p>
   
   </div>
-  <button data-aos="fade-up" className="glow-on-hover2" onClick={postData}>Submit</button>
+  <button  className="glow-on-hover2" onClick={postData}>Submit</button>
 </form>
 </div>
   </div>;

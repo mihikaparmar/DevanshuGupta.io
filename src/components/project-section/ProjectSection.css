@@ -39,3 +39,15 @@
      margin-top: 30px;
      margin-left: 20px;
  }
+
+ @media screen and (max-width: 600px) {
+
+    .section-block{
+        background: linear-gradient(90.57deg, #c1c7fa 1.73%, #1c023f 101.09%);
+        height: 145vh;
+        top: 560px;
+        position: relative;
+    }
+ }
+
+  

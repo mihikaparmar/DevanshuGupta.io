@@ -94,3 +94,52 @@ hr.new1 {
     width: 60%;
     top: -70px;
 }
+
+@media screen and (max-width: 600px){
+
+    .image img{
+        position: relative;
+        left: -90px;
+        width: 103%;
+        top: 15px;
+    }
+
+    .parag1 h1{
+        position: absolute;
+       left: 130px;
+        top: 1000px;
+        font-size: 32px;
+        width: 190px;
+    }
+    .parag2 p{
+      position: absolute;
+      left: 40px;
+      top: 1100px;
+      font-size: 15px;
+      width: 340px;
+  }
+  .parag3 h3{
+      position: absolute;
+      left: 40px;
+     
+      top: 1320px;
+      font-size: 19px;
+      width: 340px;
+  }
+  .glow-on-hover1 {
+    width: 195px;
+    height: 46px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: rgb(123, 114, 202);
+    cursor: pointer;
+    position: absolute;
+    left: 92px;
+    top: 1426px;
+    z-index: 0;
+    border-radius: 10px;
+
+}
+
+}
