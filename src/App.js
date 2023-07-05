@@ -1,33 +1,55 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate
+} from "react-router-dom";
+
+import Home from './pages/Home'
+import Skill from './pages/Skillset'
+import Project from './pages/Projects'
+import Resume from './pages/Resume'
+import Contact from './pages/Contact'
+
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import Preloader from "./components/PreLoader"
+import ScrollToTop from "./components/ScrollToTop"
+
 import "./App.css";
+import "./style.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import Navbar from "./components/navbar/Navbar";
-import Hero from "./components/hero/Hero";
-import AboutMe from "./components/aboutme/AboutMe";
-import ProjectSection from "./components/project-section/ProjectSection";
-import ContactMe from "./components/contactme/ContactMe";
-import Footer from "./components/footer/Footer";
-// importing pages
+function App() {
+  const [load, upadateLoad] = useState(true);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      upadateLoad(false);
+    }, 1200);
 
+    return () => clearTimeout(timer);
+  }, []);
 
-const App = () => {
-
-  
   return (
-    <>
-      
-        <div className="app-container">
-          <Navbar></Navbar>
-          <Hero/>
-          <AboutMe/>
-          <ProjectSection/>
-          <ContactMe/>
-          <Footer/>
-          </div>
-          
-    </>
+    <Router>
+      <Preloader load={load} />
+      <div className="App" id={load ? "no-scroll" : "scroll"}>
+        <Navbar />
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/skillset" element={<Skill />} /> */}
+          <Route path="/project" element={<Project />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Navigate to="/"/>} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
-};
+}
 
 export default App;
